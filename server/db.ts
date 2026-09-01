@@ -37,8 +37,13 @@ export async function getUserById(id: number) {
 export async function getUserByUsername(username: string) {
   const db = await getDb();
   if (!db) return undefined;
-  const rows = await db.select().from(users).where(eq(users.username, username)).limit(1);
-  return rows[0];
+  try {
+    const rows = await db.select().from(users).where(eq(users.username, username)).limit(1);
+    return rows[0];
+  } catch (error) {
+    console.error("[Database Error] Failed to fetch user by username:", error);
+    throw error;
+  }
 }
 
 export async function updateUserPassword(userId: number, passwordHash: string) {
