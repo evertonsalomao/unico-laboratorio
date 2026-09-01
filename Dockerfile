@@ -36,9 +36,8 @@ COPY package.json pnpm-lock.yaml ./
 COPY patches ./patches
 RUN pnpm install --prod --frozen-lockfile
 
-# Copy compiled dist bundle and db directory
+# Copy compiled dist bundle
 COPY --from=builder /app/dist ./dist
-COPY --from=builder /app/db ./db
 
 EXPOSE 3000
 
