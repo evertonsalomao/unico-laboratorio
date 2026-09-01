@@ -8,8 +8,9 @@ ENV NODE_ENV=development
 # Enable pnpm
 RUN corepack enable && corepack prepare pnpm@10.4.1 --activate
 
-# Copy lockfile and package declaration
+# Copy lockfile, package declaration and patches
 COPY package.json pnpm-lock.yaml ./
+COPY patches ./patches
 
 # Install all dependencies (including devDependencies for build)
 RUN pnpm install --frozen-lockfile --prod=false
@@ -30,8 +31,9 @@ ENV PORT=3000
 
 RUN corepack enable && corepack prepare pnpm@10.4.1 --activate
 
-# Copy package files and install production dependencies only
+# Copy package files, patches and install production dependencies only
 COPY package.json pnpm-lock.yaml ./
+COPY patches ./patches
 RUN pnpm install --prod --frozen-lockfile
 
 # Copy compiled dist bundle and db directory
