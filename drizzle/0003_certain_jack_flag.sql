@@ -1,0 +1,1 @@
+ALTER TABLE `os_launches` ADD `observation` varchar(500);

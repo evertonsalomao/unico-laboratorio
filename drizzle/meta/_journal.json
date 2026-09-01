@@ -1,0 +1,41 @@
+{
+  "version": "7",
+  "dialect": "mysql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "5",
+      "when": 1787025746483,
+      "tag": "0000_gigantic_ser_duncan",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "5",
+      "when": 1787025906987,
+      "tag": "0001_even_tempest",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "5",
+      "when": 1787026327106,
+      "tag": "0002_flawless_ultimatum",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "5",
+      "when": 1787026847710,
+      "tag": "0003_certain_jack_flag",
+      "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "5",
+      "when": 1787028657513,
+      "tag": "0004_puzzling_arclight",
+      "breakpoints": true
+    }
+  ]
+}

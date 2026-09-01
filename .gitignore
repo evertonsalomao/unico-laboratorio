@@ -1,0 +1,17 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+
+# Banco de dados e dumps (conforme solicitado)
+db/
+
+# Logs e arquivos temporários
+.manus-logs/
+*.log
+.DS_Store
+
+# Variáveis de ambiente locais
+.env
+.env.local
