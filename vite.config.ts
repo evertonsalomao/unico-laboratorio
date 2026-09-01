@@ -3,7 +3,8 @@ import tailwindcss from "@tailwindcss/vite";
 import react from "@vitejs/plugin-react";
 import fs from "node:fs";
 import path from "node:path";
-import { defineConfig, type Plugin, type ViteDevServer } from "vite";
+import type { UserConfig, Plugin, ViteDevServer } from "vite";
+const defineConfig = (config: UserConfig): UserConfig => config;
 import { vitePluginManusRuntime } from "vite-plugin-manus-runtime";
 
 // =============================================================================
